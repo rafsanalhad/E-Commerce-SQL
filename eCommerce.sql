@@ -3,7 +3,23 @@ create database ecommerce;
 
 use ecommerce;
 
-create table category (
+CREATE TABLE category (
     category_id INT PRIMARY KEY NOT NULL,
     category_name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE user (
+    user_id INT PRIMARY KEY NOT NULL,
+    username VARCHAR(20) UNIQUE NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    gender ENUM('L', 'P') NOT NULL,
+    birth_date DATE NOT NULL,
+    address TEXT NOT NULL,
+    phone_number VARCHAR(30) NOT NULL,
+    email_address VARCHAR(50) NOT NULL,
+    join_date DATETIME NOT NULL,
+    country_code VARCHAR(10) NOT NULL,
+    store_id INT(15),
+    active_status BOOLEAN NOT NULL,
+    last_login DATETIME NOT NULL
 );
