@@ -8,6 +8,7 @@ CREATE TABLE category (
     category_name VARCHAR(50) NOT NULL
 );
 
+
 CREATE TABLE user (
     user_id INT PRIMARY KEY NOT NULL,
     username VARCHAR(20) UNIQUE NOT NULL,
@@ -23,4 +24,16 @@ CREATE TABLE user (
     active_status BOOLEAN NOT NULL,
     last_login DATETIME NOT NULL,
     payment_id INT NULL
+);
+
+CREATE TABLE product (
+    product_id INT PRIMARY KEY NOT NULL,
+    product_name VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL,
+    price DOUBLE NOT NULL,
+    quantity INT NOT NULL,
+    voucher_id INT NOT NULL,
+    category_id INT NOT NULL,
+    store_id INT NOT NULL,
+    date_posted DATETIME NOT NULL
 );
