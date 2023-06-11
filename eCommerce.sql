@@ -1,4 +1,6 @@
 drop database if exists ecommerce;
 create database ecommerce;
-ee
+nurul wibu
+arno siakad
+imam ngodheeng
 use ecommerce;
