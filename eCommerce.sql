@@ -2,6 +2,8 @@ drop database if exists ecommerce;
 create database ecommerce;
 
 use ecommerce;
-create table nurulwibu(
-    id varchar(50) primary key
+
+create table category (
+    category_id INT PRIMARY KEY NOT NULL,
+    category_name VARCHAR(50) NOT NULL
 );
