@@ -21,5 +21,6 @@ CREATE TABLE user (
     country_code VARCHAR(10) NOT NULL,
     store_id INT(15),
     active_status BOOLEAN NOT NULL,
-    last_login DATETIME NOT NULL
+    last_login DATETIME NOT NULL,
+    payment_id INT NULL
 );
