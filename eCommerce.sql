@@ -37,6 +37,39 @@ CREATE TABLE product (
     store_id INT NOT NULL,
     date_posted DATETIME NOT NULL
 );
+
+CREATE TABLE voucher (
+    voucher_id INT PRIMARY KEY NOT NULL,
+    voucher_code VARCHAR(50) NOT NULL,
+    store_id INT NOT NULL,
+    discount_percentage DECIMAL(5,2) NOT NULL,
+    usage_limit INT NOT NULL,
+    usage_count INT NOT NULL,
+    date_created DATETIME NOT NULL,
+    date_expired DATETIME NOT NULL
+);
+
+CREATE TABLE notification (
+    notification_id INT PRIMARY KEY NOT NULL,
+    user_id INT NOT NULL,
+    store_id INT NOT NULL,
+    notification_type VARCHAR(50) NOT NULL,
+    notification_role VARCHAR(50) NOT NULL,
+    notification_text TEXT NOT NULL,
+    notification_timestamp TIMESTAMP NOT NULL
+)
+
+CREATE TABLE chat (
+    chat_id INT PRIMARY KEY NOT NULL,
+    message TEXT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    is_read BOOLEAN NOT NULL,
+    is_archived BOOLEAN NOT NULL,
+    store_id INT NOT NULL,
+    product_id INT NULL,
+    user_id INT NOT NULL
+)
+
 create table payment(
     payment-_id int primary key,
     bank_coode int
