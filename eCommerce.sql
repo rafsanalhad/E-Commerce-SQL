@@ -37,3 +37,12 @@ CREATE TABLE product (
     store_id INT NOT NULL,
     date_posted DATETIME NOT NULL
 );
+create table payment(
+    payment-_id int primary key,
+    bank_coode int
+    billing_adress varchar(50),
+    card_holder_name varchar(50),
+    cvv int,
+    payment_gateway varchar(25),
+    currency varchar(15)
+);
