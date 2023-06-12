@@ -8,7 +8,6 @@ CREATE TABLE category (
     category_name VARCHAR(50) NOT NULL
 );
 
-
 CREATE TABLE user (
     user_id INT PRIMARY KEY NOT NULL,
     username VARCHAR(20) UNIQUE NOT NULL,
@@ -57,7 +56,7 @@ CREATE TABLE notification (
     notification_role VARCHAR(50) NOT NULL,
     notification_text TEXT NOT NULL,
     notification_timestamp TIMESTAMP NOT NULL
-)
+);
 
 CREATE TABLE chat (
     chat_id INT PRIMARY KEY NOT NULL,
@@ -71,7 +70,7 @@ CREATE TABLE chat (
 )
 
 create table payment(
-    payment-_id int primary key,
+    payment_id int primary key,
     bank_coode int
     billing_adress varchar(50),
     card_holder_name varchar(50),
