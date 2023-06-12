@@ -67,11 +67,11 @@ CREATE TABLE chat (
     store_id INT NOT NULL,
     product_id INT NULL,
     user_id INT NOT NULL
-)
+);
 
 create table payment(
     payment_id int primary key,
-    bank_coode int
+    bank_code int,
     billing_adress varchar(50),
     card_holder_name varchar(50),
     cvv int,
