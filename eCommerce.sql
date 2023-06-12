@@ -78,3 +78,35 @@ create table payment(
     payment_gateway varchar(25),
     currency varchar(15)
 );
+create table store(
+    store_id int primary key,
+    user_id int,
+    store_name varchar(50),
+    country_code varchar(10),
+    description varchar(100),
+    date_created DATETIME,
+    store_rating DOUBLE,
+    last_online DATETIME,
+    active_status boolean
+);
+create table order(
+    order_id int primary key,
+    store_id int,
+    product_id int,
+    quantity int,
+    price double,
+    order_date DATETIME,
+    payment_method int,
+    payment_status boolean,
+    order_status boolean
+);
+create table transaction(
+    transaction_id int primary key,
+    user_id int,
+    order_id int,
+    payment_method int,
+    transaction_date DATETIME,
+    transaction_amount int,
+    transaction_status boolean,
+    transaction_confirmation boolean
+);
